@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Error Page</title>
+</head>
+<body>
+    <h1>Error Page</h1>
+    <p th:text="'Error: '+ ${error}"></p>
+    <a href="index.html">Login</a>
+    <br>	
+    <a href="registration.html">Create an Account</a>
+</body>
+</html>

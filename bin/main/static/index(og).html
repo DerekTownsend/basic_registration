@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<h1>Index</h1> 
+	<form action="login" method="post">
+		<input type="text" name="username" id="username">
+		 <br>
+		<input type="text" name="password" id="password">
+		 <br>
+		<input type="submit" value="login" id="login">	
+	</form>
+	<button id="createAccBtn">Create Account</button>
+	
+<script>
+var createAccBtn=document.getElementById("createAccBtn");
+
+createAccBtn.addEventListener("click",function(){
+	document.location="registration.html";
+});
+</script>
+<input type="button" value="Get Users JS" id="users">	
+
+<div id="userList">
+
+</div>	
+
+<script>
+$("#users").on("click",clickhandler);
+
+function clickhandler(){
+	$.get("users",function(response){
+		//$("#userList").html(JSON.stringify(response));
+		var table=$("<table></table>");
+		var theader=$("<tr><th>Username</th><th>Password</th><th>First Name</th><th>Last name</th></tr>");
+		table.append(theader)
+		for(var i=0;i<response.length;i++){
+			//console.log(response[i].username)
+			tr=$("<tr></tr>");
+			td1=$("<td>"+response[i].username+"</td>");
+			td2=$("<td>"+response[i].password+"</td>");
+			td3=$("<td>"+response[i].firstName+"</td>");
+			td4=$("<td>"+response[i].lastName+"</td>");
+			tr.append(td1);
+			tr.append(td2);
+			tr.append(td3);
+			tr.append(td4);
+			table.append(tr)
+		}
+		$("#userList").append(table)
+});
+}
+
+//tr th username password firstname Lastname tr
+//
+//var table=$("<table></table>");
+//var tableRow=$("<tr></tr>");
+//var th=$("<th></th>")
+//tableRow.append(th)
+//tableRow.append(th)
+//tableRow.append(th)
+//tableRow.append(th)
+//table.append(tr)
+//div.append(table)
+</script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+body{
+    margin: 10em auto 4em;
+    width: 100%;
+    min-height:100vh; 
+    position: relative;
+    background-color: #333;
+    color: lightblue;
+    font-family: Helvetica;
+}
+.form-body{
+  overflow: hidden;
+}
+/*homepage css*/
+main{
+  width:80%;
+  min-height:100vh;
+  margin: 8em auto 4em;
+  border:solid lightblue .1em;
+  box-sizing: border-box;
+  padding:.5em;
+}
+main h1,
+main h2{
+  text-align: center;
+}
+/*.login-link,*/
+/*.reg-link{*/
+/*    box-sizing: border-box;*/
+/*    text-align: center;*/
+/*    background-color:lightblue;*/
+/*    padding: 1em;*/
+/*  }*/
+/*.reg-link{*/
+/*    background-color:lightgreen;*/
+/*    margin-left: .5em ;*/
+/*  }*/
+nav {
+  margin: 0;
+  background-color: #333;
+  position:fixed;
+  top: 0;
+  width:100%;
+  border-bottom:lightblue solid .1em; 
+  min-height: 6.5em;
+  z-index: 1;
+}
+ul.nav {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-around;*/
+  flex-wrap: wrap;
+  align-items:center;
+  min-height: 6.5em;
+}
+ul.nav li {
+  font-size: 1.5em;
+  padding: 0.5em;
+  box-sizing: border-box;
+
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+nav img{
+  height: 3em;
+  margin: 0;
+}
+ul.nav li:first-child{
+  margin-left: -1em;
+
+}
+nav li:first-child{
+  padding: 0;
+}
+
+.nav button{
+  background:none;
+  color:lightblue;
+  border:none;
+  font-size:1em;
+  padding:0;
+}
+
+
+.active{
+    width: 65%;
+}
+.active input{
+  padding: 5px;
+  box-sizing: border-box;
+}
+.search-form{
+  position: relative
+}
+.search{
+    width: 100%;
+    font-size: 1.2em;
+    padding-right: 2em;
+}
+.submit-icon{
+  /*margin-left: -2em;*/
+  position: absolute;
+  right: .5em;
+  top: 0;
+  width: 3.4em;
+  height: 3.9em;
+  border:none;
+  background:none;
+  /*background-color: black;*/
+  z-index: 20;
+  background-image: url("../images/icon-search.png");
+  background-size: cover;
+}
+.state-size{
+  position: absolute;
+    top: 0;
+    right: 6em;
+    height: 3.9em;
+    border: none;
+    background: none;}
+ul.nav li:nth-child(4),
+ul.nav li:nth-child(5){
+    box-sizing: border-box;
+    min-width: 12%;
+    text-align: center;
+    background-color:lightblue;
+  }
+ul.nav li:nth-child(5){
+    background-color:lightgreen;
+    margin-left: .5em;
+  }
+.icon{
+  display:none;
+}
+/*.submit-icon{*/
+/*  position: absolute;*/
+/*  right: 30%;*/
+/*  top:30%;*/
+  
+/*}*/
+ul.nav li:nth-child(2){
+  display: none;
+}
+
+@media screen and (max-width:900px){
+  
+  ul.nav li{
+    display:none;
+  }
+  ul.nav li:nth-child(4),
+  ul.nav li:nth-child(5){
+    width: 50%;
+    margin-right: 0;
+
+  }
+  ul.nav li:nth-child(5){
+    margin-left: 0;
+  }
+  ul.nav{
+    /*flex-direction:column;*/
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  ul.nav li.icon{
+    display:block;
+    position:absolute;
+    padding: 0;
+    top:.5em;
+    right:0;
+    font-size: 2em;
+  }
+  ul.nav li.icon button{
+    padding: .4em;
+    cursor:pointer;
+  }
+  ul.nav li:first-child {
+    display: block;
+    position:absolute;
+    top:.5em;
+    left:.5em;
+    margin-left: 0em;
+
+  }
+
+  ul.nav li:nth-child(2) {
+    margin-top: 4.4em;
+    padding-top: 0;
+    width: 100%;
+    text-align: center;
+    border-top: .05em lightblue solid;
+
+  }
+  ul.nav.responsive li{
+    display:block;
+  }
+  .active{
+    width: 100%;
+  }
+}
+/*Login CSS*/
+.form{ 
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1.5em;
+    text-align: center;
+    position: absolute;
+    width: 35%;
+    height: 20em;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border:lightblue solid .1em;
+    padding: 1em;
+    border-radius: 2em;
+    margin-top: 1em;
+
+}
+.registration{
+  height: 30em;
+}
+.form input,label{
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: .9em;
+    border-radius: .2em;
+    width: 100%;
+    margin: .25em 0;
+    padding: 5px;
+}
+.form label{
+    text-align: left;
+    font-size: 1em;
+}
+.form img{
+    width: 100px;
+}
+.form a{
+    color: blue;
+}
+.form p{
+    font-size: .8em;
+}
+@media (max-width: 800px){
+  .form{
+    width: 80%;
+    height: 21em;
+    margin-top: 1em;
+  }
+  .registration{
+    height: 30em;
+  }
+}
